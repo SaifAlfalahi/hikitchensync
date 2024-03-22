@@ -102,7 +102,7 @@ img{
 }
 
 .bg-colored-section{
-    background: linear-gradient(45deg, #64BDC1, transparent);
+    background: linear-gradient(45deg, #CAF446, transparent);
 }
 
 header & .navbar-dark {
@@ -131,8 +131,8 @@ main>section:first-child {
 
 .main-btn {
     align-items: center;
-    background: #64BDC1 !important;
-    color: white !important;
+    background: #CAF446 !important;
+    color: #072f2e !important;
     padding: .8rem 2rem !important;
     border-radius: .5rem !important;
     border: none !important;
@@ -140,7 +140,7 @@ main>section:first-child {
 }
 
 .main-btn:hover {
-    background: #4a9599 !important;
+    background: #38742c !important;
     color: white !important;
 }
 
@@ -176,7 +176,7 @@ main>section:first-child {
 }
 
 .form-control {
-    border: 1px solid #64BDC1 !important;
+    border: 1px solid #CAF446 !important;
 
 }
 
@@ -947,7 +947,7 @@ span.dash-text::after{
 }
 .bg-esaal.text-esaal {
     color: white!important;
-    background-color: #64BDC1!important;
+    background-color: #CAF446!important;
 }
 .bg-soft-success {
     background-color: rgba(71,189,154,.3)!important;
