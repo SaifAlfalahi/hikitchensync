@@ -1,0 +1,966 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@100;300;400;500;600;700;900&display=swap');
+
+html,
+body {
+    transition: all ease-in-out 500ms;
+
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+span,
+label,
+select,
+input,
+button,
+.alert {
+    font-family: 'Cairo', sans-serif !important;
+}
+
+
+.md-0-5 {
+    font-size: .5rem;
+}
+
+.md-1 {
+    font-size: 1rem;
+}
+
+.md-1-5 {
+    font-size: 1.5rem;
+}
+
+.md-2 {
+    font-size: 2rem;
+}
+
+.md-2-5 {
+    font-size: 2.5rem;
+}
+
+.md-3 {
+    font-size: 3rem;
+}
+
+ion-icon {
+    margin: 0 4px;
+}
+
+.icon-white {
+    color: white;
+}
+
+img{
+    pointer-events: none;
+}
+
+.bg-blob{
+    background-size: contain!important;
+    background-repeat: no-repeat!important;
+    background: url('assets/img/blob-blue.png');
+}
+
+.img-shadow{
+    box-shadow: 16px 15px 65px -18px rgba(0, 0, 0, 0.49);
+    -webkit-box-shadow: 16px 15px 65px -18px rgba(0, 0, 0, 0.49);
+    -moz-box-shadow: 16px 15px 65px -18px rgba(0, 0, 0, 0.49);
+}
+
+.bg-blob-b1{
+    background-size: contain!important;
+    background-repeat: no-repeat!important;
+    background: url('assets/img/blob-bbb.png');
+    background-position: center center; /* Center the background image */
+}
+
+.bg-blob-b2{
+    background-size: contain!important;
+    background-repeat: no-repeat!important;
+    background: url('assets/img/blob-bbbb.png');
+    background-position: center center; /* Center the background image */
+}
+
+.bg-blob-b3{
+    background-size: contain!important;
+    background-repeat: no-repeat!important;
+    background: url('assets/img/blob-b33.png');
+    background-position: center center; /* Center the background image */
+}
+
+.bg-blob-b4{
+    background-size: contain!important;
+    background-repeat: no-repeat!important;
+    background: url('assets/img/blob-b4.svg');
+    background-position: center center; /* Center the background image */
+}
+
+.bg-colored-section{
+    background: linear-gradient(45deg, #64BDC1, transparent);
+}
+
+header & .navbar-dark {
+    background: #191919 !important;
+}
+
+.navbar-brand {
+    width: 40px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.navbar-toggler {
+    border: none !important;
+}
+
+.navbar-nav .nav-item+.nav-item {
+    margin-left: 1rem !important;
+}
+
+
+main>section:first-child {
+    margin-top: 30px !important;
+}
+
+
+.main-btn {
+    align-items: center;
+    background: #64BDC1 !important;
+    color: white !important;
+    padding: .8rem 2rem !important;
+    border-radius: .5rem !important;
+    border: none !important;
+    margin-top: 1.5rem !important;
+}
+
+.main-btn:hover {
+    background: #4a9599 !important;
+    color: white !important;
+}
+
+
+.custom-table tr th,
+.custom-table tr td {
+    border: solid 1px #e8e8e8;
+    padding: 0 20px;
+}
+
+.steps-img {
+    width: auto !important;
+    max-width: 100% !important;
+    max-height: 588px !important;
+}
+
+.bg-hero-main {
+    background-size: cover !important;
+    background: url('/assets/img/hero-main.png');
+}
+
+.img-full-width {
+    width: 100% !important;
+}
+
+.contact-hover {
+    color: black !important;
+}
+
+.contact-hover:hover {
+    text-decoration: none;
+    color: black !important;
+}
+
+.form-control {
+    border: 1px solid #64BDC1 !important;
+
+}
+
+.marquee {
+    display: flex;
+    margin-top: 20px; 
+    overflow-x: hidden;
+    position: relative;
+    direction: ltr;
+}
+
+.marquee__inner {
+    display: flex;
+    animation: marqueeAnimation 35s linear infinite; /* Adjust duration as needed */
+}
+
+.marquee__logo-holder {
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 230px;
+    max-height: 100px;
+    margin: 0 1.5rem;
+    border-radius: 0.5rem;
+    padding: 4.5rem 0;
+}
+
+.marquee:before {
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background: white;
+    background: linear-gradient(90deg, white 10%, rgba(24, 47, 124, 0) 90%);
+    z-index: 99;
+    left: 0;
+}
+
+.marquee:after {
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background: white;
+    background: linear-gradient(266deg, white 10%, rgba(24, 47, 124, 0) 90%);
+    z-index: 99;
+    right: 0;
+}
+
+@media (max-width: 899.98px) {
+    .marquee__logo-holder {
+        min-width: 110px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dapp-section{
+        height: 35rem!important;
+    }
+}
+
+.dapp-section{
+    height: 45rem;
+}
+
+
+.marquee__logo-holder img {
+    max-width: 150px;
+}
+
+
+.marquee__inner:hover {
+    animation-play-state: paused;
+}
+
+/* Define keyframes for CSS animation */
+@keyframes marqueeAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.dash-box{
+    padding: 1rem;
+    background: linear-gradient(to bottom right, #72c0e223, #e9e9ea);
+    border-radius: .5rem;
+}
+
+span.dash-text::after{
+    content: "♦︎ ";
+    color: #46B4D2;
+}
+
+
+.bg-downloadapp{
+    background: linear-gradient(90deg, rgba(88,195,224,1) 0%, rgba(67,98,114,1) 84%);
+
+
+}
+
+.blue-grd {
+    background: linear-gradient(to bottom right, #72c0e223, #e9e9ea);
+}
+
+
+.brown-grd {
+    background: linear-gradient(to bottom right, #584A3C, #393334);
+}
+
+.green-grd {
+    background: linear-gradient(to bottom right, #4B823E, #5A9C4A);
+}
+
+.purple-grd {
+    background: linear-gradient(to bottom right, #CC2EEA, #E33F73);
+}
+
+.animated-grd {
+    animation: gradient 5s linear infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    25% {
+        background-position: 100% 50%;
+    }
+
+    50% {
+        background-position: 0% 50%;
+    }
+
+    75% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.text-animation span {
+    color: #7ABBC0;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .text-animation span.active {
+    opacity: 1;
+  }
+
+/* 
+.counter-1::after {
+    font: 800 40px system-ui;
+    content: counter(count);
+    animation: counter-1 2s linear forwards;
+    counter-reset: count 0;
+}
+@keyframes counter-1 {
+    0% {
+        counter-increment: count 0;
+    }
+    4.34% {
+        counter-increment: count 1;
+    }
+    8.69% {
+        counter-increment: count 2;
+    }
+    13.04% {
+        counter-increment: count 3;
+    }
+    17.39% {
+        counter-increment: count 4;
+    }
+    21.74% {
+        counter-increment: count 5;
+    }
+    26.09% {
+        counter-increment: count 6;
+    }
+    30.43% {
+        counter-increment: count 7;
+    }
+    34.78% {
+        counter-increment: count 8;
+    }
+    39.13% {
+        counter-increment: count 9;
+    }
+    43.48% {
+        counter-increment: count 10;
+    }
+    47.83% {
+        counter-increment: count 11;
+    }
+    52.17% {
+        counter-increment: count 12;
+    }
+    56.52% {
+        counter-increment: count 13;
+    }
+    60.87% {
+        counter-increment: count 14;
+    }
+    65.22% {
+        counter-increment: count 15;
+    }
+    69.57% {
+        counter-increment: count 16;
+    }
+    73.91% {
+        counter-increment: count 17;
+    }
+    78.26% {
+        counter-increment: count 18;
+    }
+    82.61% {
+        counter-increment: count 19;
+    }
+    86.96% {
+        counter-increment: count 20;
+    }
+    91.30% {
+        counter-increment: count 21;
+    }
+    95.65% {
+        counter-increment: count 22;
+    }
+    100% {
+        counter-increment: count 23;
+    }
+}
+
+.counter-2::after {
+    font: 800 40px system-ui;
+    content: counter(count);
+    animation: counter-2 2s linear forwards;
+    counter-reset: count 0;
+}
+
+@keyframes counter-2 {
+    0% {
+        counter-increment: count 0;
+    }
+    3.33% {
+        counter-increment: count 1;
+    }
+    6.67% {
+        counter-increment: count 2;
+    }
+    10% {
+        counter-increment: count 3;
+    }
+    13.33% {
+        counter-increment: count 4;
+    }
+    16.67% {
+        counter-increment: count 5;
+    }
+    20% {
+        counter-increment: count 6;
+    }
+    23.33% {
+        counter-increment: count 7;
+    }
+    26.67% {
+        counter-increment: count 8;
+    }
+    30% {
+        counter-increment: count 9;
+    }
+    33.33% {
+        counter-increment: count 10;
+    }
+    36.67% {
+        counter-increment: count 11;
+    }
+    40% {
+        counter-increment: count 12;
+    }
+    43.33% {
+        counter-increment: count 13;
+    }
+    46.67% {
+        counter-increment: count 14;
+    }
+    50% {
+        counter-increment: count 15;
+    }
+    53.33% {
+        counter-increment: count 16;
+    }
+    56.67% {
+        counter-increment: count 17;
+    }
+    60% {
+        counter-increment: count 18;
+    }
+    63.33% {
+        counter-increment: count 19;
+    }
+    66.67% {
+        counter-increment: count 20;
+    }
+    70% {
+        counter-increment: count 21;
+    }
+    73.33% {
+        counter-increment: count 22;
+    }
+    76.67% {
+        counter-increment: count 23;
+    }
+    80% {
+        counter-increment: count 24;
+    }
+    83.33% {
+        counter-increment: count 25;
+    }
+    86.67% {
+        counter-increment: count 26;
+    }
+    90% {
+        counter-increment: count 27;
+    }
+    93.33% {
+        counter-increment: count 28;
+    }
+    96.67% {
+        counter-increment: count 29;
+    }
+    100% {
+        counter-increment: count 30;
+    }
+}
+
+.counter-3::after {
+    font: 800 40px system-ui;
+    content: counter(count);
+    animation: counter-3 2s linear forwards;
+    counter-reset: count 0;
+}
+
+@keyframes counter-3 {
+    0% {
+        counter-increment: count 0;
+    }
+    1.43% {
+        counter-increment: count 1;
+    }
+    2.86% {
+        counter-increment: count 2;
+    }
+    4.29% {
+        counter-increment: count 3;
+    }
+    5.71% {
+        counter-increment: count 4;
+    }
+    7.14% {
+        counter-increment: count 5;
+    }
+    8.57% {
+        counter-increment: count 6;
+    }
+    10% {
+        counter-increment: count 7;
+    }
+    11.43% {
+        counter-increment: count 8;
+    }
+    12.86% {
+        counter-increment: count 9;
+    }
+    14.29% {
+        counter-increment: count 10;
+    }
+    15.71% {
+        counter-increment: count 11;
+    }
+    17.14% {
+        counter-increment: count 12;
+    }
+    18.57% {
+        counter-increment: count 13;
+    }
+    20% {
+        counter-increment: count 14;
+    }
+    21.43% {
+        counter-increment: count 15;
+    }
+    22.86% {
+        counter-increment: count 16;
+    }
+    24.29% {
+        counter-increment: count 17;
+    }
+    25.71% {
+        counter-increment: count 18;
+    }
+    27.14% {
+        counter-increment: count 19;
+    }
+    28.57% {
+        counter-increment: count 20;
+    }
+    30% {
+        counter-increment: count 21;
+    }
+    31.43% {
+        counter-increment: count 22;
+    }
+    32.86% {
+        counter-increment: count 23;
+    }
+    34.29% {
+        counter-increment: count 24;
+    }
+    35.71% {
+        counter-increment: count 25;
+    }
+    37.14% {
+        counter-increment: count 26;
+    }
+    38.57% {
+        counter-increment: count 27;
+    }
+    40% {
+        counter-increment: count 28;
+    }
+    41.43% {
+        counter-increment: count 29;
+    }
+    42.86% {
+        counter-increment: count 30;
+    }
+    44.29% {
+        counter-increment: count 31;
+    }
+    45.71% {
+        counter-increment: count 32;
+    }
+    47.14% {
+        counter-increment: count 33;
+    }
+    48.57% {
+        counter-increment: count 34;
+    }
+    50% {
+        counter-increment: count 35;
+    }
+    51.43% {
+        counter-increment: count 36;
+    }
+    52.86% {
+        counter-increment: count 37;
+    }
+    54.29% {
+        counter-increment: count 38;
+    }
+    55.71% {
+        counter-increment: count 39;
+    }
+    57.14% {
+        counter-increment: count 40;
+    }
+    58.57% {
+        counter-increment: count 41;
+    }
+    60% {
+        counter-increment: count 42;
+    }
+    61.43% {
+        counter-increment: count 43;
+    }
+    62.86% {
+        counter-increment: count 44;
+    }
+    64.29% {
+        counter-increment: count 45;
+    }
+    65.71% {
+        counter-increment: count 46;
+    }
+    67.14% {
+        counter-increment: count 47;
+    }
+    68.57% {
+        counter-increment: count 48;
+    }
+    70% {
+        counter-increment: count 49;
+    }
+    71.43% {
+        counter-increment: count 50;
+    }
+    72.86% {
+        counter-increment: count 51;
+    }
+    74.29% {
+        counter-increment: count 52;
+    }
+    75.71% {
+        counter-increment: count 53;
+    }
+    77.14% {
+        counter-increment: count 54;
+    }
+    78.57% {
+        counter-increment: count 55;
+    }
+    80% {
+        counter-increment: count 56;
+    }
+    81.43% {
+        counter-increment: count 57;
+    }
+    82.86% {
+        counter-increment: count 58;
+    }
+    84.29% {
+        counter-increment: count 59;
+    }
+    85.71% {
+        counter-increment: count 60;
+    }
+    87.14% {
+        counter-increment: count 61;
+    }
+    88.57% {
+        counter-increment: count 62;
+    }
+    90% {
+        counter-increment: count 63;
+    }
+    91.43% {
+        counter-increment: count 64;
+    }
+    92.86% {
+        counter-increment: count 65;
+    }
+    94.29% {
+        counter-increment: count 66;
+    }
+    95.71% {
+        counter-increment: count 67;
+    }
+    97.14% {
+        counter-increment: count 68;
+    }
+    98.57% {
+        counter-increment: count 69;
+    }
+    100% {
+        counter-increment: count 70;
+    }
+}
+
+
+.counter-4::after {
+    font: 800 40px system-ui;
+    content: counter(count);
+    animation: counter-4 2s linear forwards;
+    counter-reset: count 0;
+}
+
+@keyframes counter-4 {
+    0% {
+        counter-increment: count 0;
+    }
+    5% {
+        counter-increment: count 1;
+    }
+    10% {
+        counter-increment: count 2;
+    }
+    15% {
+        counter-increment: count 3;
+    }
+    20% {
+        counter-increment: count 4;
+    }
+    25% {
+        counter-increment: count 5;
+    }
+    30% {
+        counter-increment: count 6;
+    }
+    35% {
+        counter-increment: count 7;
+    }
+    40% {
+        counter-increment: count 8;
+    }
+    45% {
+        counter-increment: count 9;
+    }
+    50% {
+        counter-increment: count 10;
+    }
+    55% {
+        counter-increment: count 11;
+    }
+    60% {
+        counter-increment: count 12;
+    }
+    65% {
+        counter-increment: count 13;
+    }
+    70% {
+        counter-increment: count 14;
+    }
+    75% {
+        counter-increment: count 15;
+    }
+    80% {
+        counter-increment: count 16;
+    }
+    85% {
+        counter-increment: count 17;
+    }
+    90% {
+        counter-increment: count 18;
+    }
+    95% {
+        counter-increment: count 19;
+    }
+    100% {
+        counter-increment: count 20;
+    }
+} */
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media(min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media(min-width: 992px) {}
+
+
+@media(max-width:768px) {}
+
+
+.timeline-steps {
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+}
+
+.timeline-steps .timeline-step {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 1rem;
+}
+
+@media (min-width:768px) {
+    .timeline-steps .timeline-step:not(:last-child):after {
+        content: "";
+        display: block;
+        border-top: .25rem dotted #3b82f6;
+        width: 100%;
+        position: absolute;
+        left: 7.5rem;
+        top: .3125rem;
+    }
+    .timeline-steps .timeline-step:not(:first-child):before {
+        content: "";
+        display: block;
+        border-top: .25rem dotted #3b82f6;
+        width: 3.8125rem;
+        position: absolute;
+        right: 7.5rem;
+        top: .3125rem;
+    }
+}
+
+.timeline-steps .timeline-content {
+    width: 10rem;
+    text-align: center;
+}
+
+.timeline-steps .timeline-content .inner-circle {
+    border-radius: 1.5rem;
+    height: 1rem;
+    width: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3b82f6;
+}
+
+.timeline-steps .timeline-content .inner-circle:before {
+    content: "";
+    background-color: #3b82f6;
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    min-width: 3rem;
+    border-radius: 6.25rem;
+    opacity: .5;
+}
+
+@media (min-width: 768px) {
+    .h-md-100 {
+        height: 100% !important;
+    }
+}
+
+
+
+
+
+.hori-timeline .events {
+    border-top: 3px solid #e9ecef;
+}
+.hori-timeline .events .event-list {
+    display: block;
+    position: relative;
+    text-align: center;
+    padding-top: 70px;
+    margin-right: 0;
+}
+.hori-timeline .events .event-list:before {
+    content: "";
+    position: absolute;
+    height: 36px;
+    border-right: 2px dashed #dee2e6;
+    top: 0;
+}
+.hori-timeline .events .event-list .event-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 2px;
+    font-size: 1.6rem;
+}
+@media (min-width: 1140px) {
+    .hori-timeline .events .event-list {
+        display: inline-block;
+        width: 24%;
+        padding-top: 45px;
+    }
+    .hori-timeline .events .event-list .event-date {
+        top: -12px;
+    }
+}
+.bg-esaal.text-esaal {
+    color: white!important;
+    background-color: #64BDC1!important;
+}
+.bg-soft-success {
+    background-color: rgba(71,189,154,.3)!important;
+}
+.bg-soft-danger {
+    background-color: rgba(231,76,94,.3)!important;
+}
+.bg-soft-warning {
+    background-color: rgba(249,213,112,.3)!important;
+}
+.card {
+    box-shadow: none!important;
+    background: transparent!important;
+    border: none!important;
+    margin-bottom: 24px;
+}
