@@ -157,9 +157,10 @@ main>section:first-child {
     max-height: 588px !important;
 }
 
+
 .bg-hero-main {
     background-size: cover !important;
-    background: url('/assets/img/hero-main.png');
+    background: url('assets/img/hero-main.png');
 }
 
 .img-full-width {

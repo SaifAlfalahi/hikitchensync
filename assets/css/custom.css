@@ -518,7 +518,7 @@ pre {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
-    margin-left: auto
+    margin-left: 1vw;
 }
 
 @media (min-width:576px) {
@@ -8698,7 +8698,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 }
 
 .ml-auto, .mx-auto {
-    margin-left: auto !important
+    margin-left: 4vw !important
 }
 
 @media (min-width:576px) {
@@ -9059,7 +9059,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
     }
 
     .ml-sm-auto, .mx-sm-auto {
-        margin-left: auto !important
+        margin-left: 4vw !important
     }
 }
 
@@ -9421,7 +9421,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
     }
 
     .ml-md-auto, .mx-md-auto {
-        margin-left: auto !important
+        margin-left: 4vw !important
     }
 }
 
@@ -9783,7 +9783,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
     }
 
     .ml-lg-auto, .mx-lg-auto {
-        margin-left: auto !important
+        margin-left: 4vw !important
     }
 }
 
@@ -10145,7 +10145,7 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
     }
 
     .ml-xl-auto, .mx-xl-auto {
-        margin-left: auto !important
+        margin-left: 4vw !important
     }
 }
 
@@ -11870,7 +11870,7 @@ a.text-dark:focus, a.text-dark:hover {
     display: -moz-inline-stack;
     display: inline-block;
     zoom: 1;
-    *display: inline;
+    display: inline;
 }
 
 .selectize-control.multi .selectize-input > div {
@@ -16521,7 +16521,7 @@ textarea.parsley-error {
 }
 
 .swiper {
-    margin-left: auto;
+    margin-left: 4vw;
     margin-right: auto;
     position: relative;
     overflow: hidden;
@@ -17726,7 +17726,7 @@ button.swiper-pagination-bullet {
         box-shadow: 0 0 .25em .25em rgba(108,179,255,.2)
     }
 
-@charset "UTF-8"; /*!
+ /*!
  * animate.css - https://animate.style/
  * Version - 4.1.1
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
@@ -21976,7 +21976,7 @@ button.swiper-pagination-bullet {
     animation-name: slideOutUp
 }
 
-@charset "UTF-8";
+
 .container,
 .container-fluid,
 .container-sm,
@@ -21988,7 +21988,7 @@ button.swiper-pagination-bullet {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: 4vw; }
 
 @media (min-width: 576px) {
   .container, .container-sm {
@@ -24813,7 +24813,7 @@ button.bg-blue:focus {
 
 .ml-auto,
 .mx-auto {
-  margin-left: auto !important; }
+  margin-left: 4vw !important; }
 
 @media (min-width: 576px) {
   .m-sm-0 {
@@ -25277,7 +25277,7 @@ button.bg-blue:focus {
     margin-bottom: auto !important; }
   .ml-sm-auto,
   .mx-sm-auto {
-    margin-left: auto !important; } }
+    margin-left: 4vw !important; } }
 
 @media (min-width: 768px) {
   .m-md-0 {
@@ -25741,7 +25741,7 @@ button.bg-blue:focus {
     margin-bottom: auto !important; }
   .ml-md-auto,
   .mx-md-auto {
-    margin-left: auto !important; } }
+    margin-left: 4vw !important; } }
 
 @media (min-width: 900px) {
   .m-mdl-0 {
@@ -26205,7 +26205,7 @@ button.bg-blue:focus {
     margin-bottom: auto !important; }
   .ml-mdl-auto,
   .mx-mdl-auto {
-    margin-left: auto !important; } }
+    margin-left: 4vw !important; } }
 
 @media (min-width: 1024px) {
   .m-lg-0 {
@@ -26669,7 +26669,7 @@ button.bg-blue:focus {
     margin-bottom: auto !important; }
   .ml-lg-auto,
   .mx-lg-auto {
-    margin-left: auto !important; } }
+    margin-left: 4vw !important; } }
 
 @media (min-width: 1200px) {
   .m-xl-0 {
@@ -27133,7 +27133,7 @@ button.bg-blue:focus {
     margin-bottom: auto !important; }
   .ml-xl-auto,
   .mx-xl-auto {
-    margin-left: auto !important; } }
+    margin-left: 4vw !important; } }
 
 .text-monospace {
   font-family: "Roboto Mono", monospace !important; }
@@ -29596,7 +29596,7 @@ label {
     width: 2.25rem;
     text-align: center;
     font: 0/0 a;
-    *font: 20px/38px Lucida Sans Unicode, Arial Unicode MS, Arial; }
+    font: 20px/38px Lucida Sans Unicode, Arial Unicode MS, Arial; }
     .selectric .button:after {
       content: " ";
       position: absolute;
@@ -29668,7 +29668,7 @@ label {
   height: 1px !important;
   outline: none !important;
   border: none !important;
-  *font: 0/0 a !important;
+  font: 0/0 a !important;
   background: none !important; }
 
 .selectric-temp-show {
@@ -35903,7 +35903,7 @@ blockquote p {
     text-align: center;
     padding: 6.25rem 0; }
   .review-listing hr {
-    margin-left: auto;
+    margin-left: 4vw;
     margin-right: auto; } }
 
 .text-white .bubble::before {
@@ -36381,9 +36381,9 @@ blockquote p {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 74.24%), linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)); }
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)); }
     .card-with-icon.background-linear-white.linearBg-invert:after {
-      background: linear-gradient(270deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 74.24%), linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)); } }
+      background: linear-gradient(270deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)); } }
   .card-with-icon__shorttitle {
     font-size: 20px;
     font-weight: bold;
@@ -39663,7 +39663,7 @@ figure.active .d-texts {
     transform: translateY(-100px); }
   .iphone-mock {
     width: 330px;
-    /* margin-left: auto; */
+    /* margin-left: 4vw; */
     /* margin-right: auto; */
     transform: scale(1) translateX(-20px); }
   .home-img-wrap {
@@ -42167,7 +42167,7 @@ body.IE .gradient1 {
   margin-top: 10px; }
 
 .arrow-scroll > span {
-  Cairo Arial,sans-serif;
+  font:  Arial,sans-serif;
   display: block;
   width: 9px;
   height: 9px;
@@ -42483,7 +42483,7 @@ a.nav-item {
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {
   .iphone-mock {
     width: 330px;
-    margin-left: auto;
+    margin-left: 4vw;
     margin-right: auto;
     transform: scale(0.7) translateX(-120px); }
   .md-pt-cus1 {
@@ -42495,7 +42495,7 @@ a.nav-item {
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {
   .iphone-mock {
     width: 330px;
-    margin-left: auto;
+    margin-left: 4vw;
     margin-right: auto;
     transform: scale(1) translateX(0px); } }
 
@@ -44692,7 +44692,7 @@ html[dir="rtl"] .card-carousel {
 .kyc-remediation button,
 .kyc-remediation select {
   margin: 0;
-  Cairo inherit;
+  font:  inherit;
   font-size: inherit;
   line-height: inherit; }
 
@@ -44738,7 +44738,7 @@ html[dir="rtl"] .card-carousel {
   padding-right: 1rem;
   padding-left: 1rem;
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: 4vw; }
 
 @media (min-width: 576px) {
   .kyc-remediation .container {
@@ -45052,7 +45052,7 @@ html[dir="rtl"] .card-carousel {
   padding-left: 2rem !important; }
 
 .kyc-remediation .ml-auto {
-  margin-left: auto !important; }
+  margin-left: 4vw !important; }
 
 @media (min-width: 768px) {
   .kyc-remediation .mt-md-0 {
@@ -45073,7 +45073,7 @@ html[dir="rtl"] .card-carousel {
     padding-right: 3rem !important;
     padding-left: 3rem !important; }
   .kyc-remediation .ml-lg-auto {
-    margin-left: auto !important; } }
+    margin-left: 4vw !important; } }
 
 @media (min-width: 992px) {
   .kyc-remediation .text-lg-left {
@@ -45340,7 +45340,7 @@ html[dir="rtl"] .card-carousel {
   left: 50%;
   display: inline-block;
   min-height: 4.5rem;
-  margin-left: auto;
+  margin-left: 4vw;
   margin-right: auto;
   padding: 1.125rem 0 0.5rem;
   transform: translateX(-50%);
@@ -46753,7 +46753,7 @@ html[dir="rtl"] .card-carousel {
 @media (min-width: 1200px) {
   .kyc-remediation .securities-steps-v1 .ipo-step-body,
   .kyc-remediation .securities-steps-v1 .ipo-step-footer {
-    margin-left: auto;
+    margin-left: 4vw;
     margin-right: auto; } }
 
 .kyc-remediation .securities-steps-v1 .side-highlight-block::before {
@@ -47163,7 +47163,7 @@ html[dir="rtl"] .card-carousel {
 .kyc-remediation .rounded.step-btn {
   padding: .5rem 1rem !important;
   flex-shrink: 0;
-  margin-left: auto !important;
+  margin-left: 4vw !important;
   margin-right: 0 !important; }
 
 .kyc-remediation .upload-type__block.rounded {
