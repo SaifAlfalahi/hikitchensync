@@ -60,7 +60,10 @@ ion-icon {
 img{
     pointer-events: none;
 }
-
+.card-with-icon__media img {
+    -webkit-transform: scaleX(-1);  /* For Safari and Chrome */
+    transform: scaleX(-1);          /* For other browsers */
+}
 .bg-blob{
     background-size: contain!important;
     background-repeat: no-repeat!important;
@@ -131,19 +134,29 @@ main>section:first-child {
 
 .main-btn {
     align-items: center;
-    background: #CAF446 !important;
-    color: #072f2e !important;
+    background: #1ca500 !important;
+    color: #fff !important;
     padding: .8rem 2rem !important;
     border-radius: .5rem !important;
     border: none !important;
     margin-top: 1.5rem !important;
 }
 
-.main-btn:hover {
-    background: #38742c !important;
+
+
+.main-btn:hover{
+    background: #0a3d3c !important;
     color: white !important;
 }
 
+.btn22 .main-btn:hover {
+    background: #1ca500 !important;
+    color: white !important;
+}
+.btn22 .main-btn {
+    background: #CAF446 !important;
+    color: black !important;
+}
 
 .custom-table tr th,
 .custom-table tr td {
