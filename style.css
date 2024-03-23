@@ -57,10 +57,11 @@ ion-icon {
     color: white;
 }
 
+
 img{
     pointer-events: none;
 }
-.card-with-icon__media img {
+.spcial img {
     -webkit-transform: scaleX(-1);  /* For Safari and Chrome */
     transform: scaleX(-1);          /* For other browsers */
 }
@@ -961,7 +962,7 @@ span.dash-text::after{
 }
 .bg-esaal.text-esaal {
     color: white!important;
-    background-color: #CAF446!important;
+    background-color: #0a3d3c !important;
 }
 .bg-soft-success {
     background-color: rgba(71,189,154,.3)!important;

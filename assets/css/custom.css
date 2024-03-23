@@ -30861,7 +30861,7 @@ footer {
   .footer h3.title {
     color: #fff;
     font-size: 1rem;
-    border-bottom: 1px solid #64BDC1;
+    border-bottom: 1px solid #CAF446;
     padding-bottom: 1rem;
     margin-bottom: .2rem;
     font-weight: 500;
@@ -30932,7 +30932,7 @@ footer {
       height: 1px;
       width: 26rem;
       display: block;
-      background-color: #64BDC1;
+      background-color: #CAF446;
       margin: 1rem auto 1rem; }
     .footer .copy-right--text p {
       color: #fff;
@@ -30949,7 +30949,7 @@ footer {
       .footer h3.title.active {
         padding: 0 0 1.3rem;
         margin-bottom: .6rem;
-        border-bottom: 1px solid #FE0121; }
+        border-bottom: 1px solid #CAF446; }
     .footer .footer__logo {
       margin: 0 auto 2rem;
       display: block; }
@@ -36205,7 +36205,7 @@ blockquote p {
     .card-with-slider .owl-dots .owl-dot.active span {
       margin: 0 !important;
       transform: scale(1) !important;
-      background-color: #64BDC1;
+      background-color: #0a3d3c ;
       width: 25px !important; }
     .card-with-slider .owl-dots .owl-dot span {
       background-color: #fff;
@@ -36217,7 +36217,7 @@ blockquote p {
         background-color: #d9d9d9;
       }
       .card-with-slider .owl-customer .owl-dots .owl-dot.active span { 
-        background-color: #64BDC1;
+        background-color: #0a3d3c ;
       }
     .card-with-slider .owl-dots .owl-dot:not(.active):hover span {
       background-color: rgba(255, 255, 255, 0.5); }
@@ -40414,7 +40414,7 @@ section.esaal-large-card {
   background-color: #fff; }
 
 .section__box-icons .icon-esaal {
-  background-color: #64BDC1;
+  background-color: #CAF446;
   border-radius: 0.5rem;
   width: 3.9rem;
   height: 3.9rem;
