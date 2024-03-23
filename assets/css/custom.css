@@ -518,7 +518,7 @@ pre {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
-    margin-left: 1vw;
+    margin-left: auto;
 }
 
 @media (min-width:576px) {
@@ -21976,7 +21976,9 @@ button.swiper-pagination-bullet {
     animation-name: slideOutUp
 }
 
-
+.customer-hero .container{
+    margin-left: 4vw !important;
+}
 .container,
 .container-fluid,
 .container-sm,
@@ -21988,7 +21990,7 @@ button.swiper-pagination-bullet {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
-  margin-left: 4vw; }
+  margin-left: auto; }
 
 @media (min-width: 576px) {
   .container, .container-sm {
