@@ -31267,7 +31267,7 @@ blockquote p {
   letter-spacing: 0.05em; }
 
 .display-5 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 300; }
 
 .display-6 {
@@ -36383,7 +36383,10 @@ blockquote p {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)); }
+      background: 
+      linear-gradient(90deg, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0) 90%),
+      linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+        }
     .card-with-icon.background-linear-white.linearBg-invert:after {
       background: linear-gradient(270deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)); } }
   .card-with-icon__shorttitle {
