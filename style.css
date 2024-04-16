@@ -967,9 +967,4 @@ span.dash-text::after {
 .bg-soft-warning {
   background-color: rgba(249, 213, 112, 0.3) !important;
 }
-.card {
-  box-shadow: none !important;
-  background: transparent !important;
-  border: none !important;
-  margin-bottom: 24px;
-}
+
