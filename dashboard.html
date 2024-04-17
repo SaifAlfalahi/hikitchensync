@@ -17,7 +17,29 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyB7GUGu4tYZ2OVloDdfN2FOhi3uEYOP4Us",
+          authDomain: "kitchensync-z.firebaseapp.com",
+          projectId: "kitchensync-z",
+          storageBucket: "kitchensync-z.appspot.com",
+          messagingSenderId: "227995726984",
+          appId: "1:227995726984:web:758990892c6f0c6a191b3d",
+          measurementId: "G-7VL72PSZ24"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
 
     <style>
         body {
