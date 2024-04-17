@@ -17,30 +17,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyB7GUGu4tYZ2OVloDdfN2FOhi3uEYOP4Us",
-          authDomain: "kitchensync-z.firebaseapp.com",
-          projectId: "kitchensync-z",
-          storageBucket: "kitchensync-z.appspot.com",
-          messagingSenderId: "227995726984",
-          appId: "1:227995726984:web:758990892c6f0c6a191b3d",
-          measurementId: "G-7VL72PSZ24"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-      </script>
-
     <style>
         body {
             background-color: #edf5e8;
@@ -116,7 +92,7 @@
         .containsTabBody {
             margin-top: 2vh;
             margin-left: 3vw;
-            height: 100%;
+            height: 200vh;
             width: 100%;
             grid-area: 2 / 2 / 3 / 3;
         }
@@ -167,7 +143,7 @@
 
         .secondRow {
             width: 24vw;
-            height: 20vh;
+            height: 30vh;
         }
 
         .thirdRow {
@@ -219,6 +195,7 @@
             background-position: center;
             background-color: #ffe3e3;
         }
+
         #rounded3 {
             background: url(assets/img/network-Kittl.svg);
             background-size: 70% !important;
@@ -226,6 +203,7 @@
             background-position: center;
             background-color: #e3e5ff;
         }
+
         .formatInsideSquares {
             display: flex;
             align-content: center;
@@ -387,12 +365,15 @@
                     <div class="firstRow d-flex justify-content-between  ">
                         <div class="card shadow roundingCardEdges thirdRow">
                             <div class="card-body">
-                                <canvas id="myChart" width="500" height="200"></canvas> <!-- Canvas element for Chart.js -->
+                                <canvas id="barChart" width="500" height="200"></canvas>
+                                <!-- Canvas element for Chart.js -->
 
                             </div>
                         </div>
                         <div class="card shadow roundingCardEdges thirdRow2">
                             <div class="card-body">
+                                <canvas id="pieChart" width="200" height="200"></canvas>
+                                <!-- Canvas element for Chart.js -->
 
                             </div>
                         </div>
@@ -403,7 +384,15 @@
                     <div class="firstRow d-flex justify-content-between  ">
                         <div class="card shadow roundingCardEdges secondRow">
                             <div class="card-body">
-
+                                <h2 style="border-bottom: rgba(0, 0, 0, 0.495) solid 0.5px; padding-bottom: 4px;">Latest
+                                    food donation:</h2>
+                                <p style="font-size: 1vw;">
+                                    Donation ID: #210229 <br>
+                                    Bank name: UAE Food Bank <br>
+                                    Branch: Muhaisnah 2 <br>
+                                    Donation date: Monday, April 1, 2024 <br>   
+                                    Donation Categories: Bread, Fruits 
+                                </p>
                             </div>
                         </div>
                         <div class="card shadow roundingCardEdges secondRow">
@@ -604,8 +593,8 @@
 
 
 
-        const ctx = document.getElementById('myChart').getContext('2d');
-        const myChart = new Chart(ctx, {
+        const ctx = document.getElementById('barChart').getContext('2d');
+        const barChart = new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr'],
@@ -629,11 +618,54 @@
             }
         });
 
-        // Now let's highlight the current monnth (April) by changing its color
-        myChart.data.datasets[0].backgroundColor = myChart.data.labels.map(
-            (month, index) => index === 11 ? 'rgba(75, 192, 192, 0.7)' : 'rgba(201, 203, 207, 0.5)' // August is at index 7
+        // Now let's highlight the current month by changing its color
+        barChart.data.datasets[0].backgroundColor = barChart.data.labels.map(
+            (month, index) => index === 11 ? 'rgba(75, 192, 192, 0.7)' : 'rgba(201, 203, 207, 0.5)' // April is at index 7
         );
-        myChart.update();
+        barChart.update();
+
+
+        const ctx2 = document.getElementById('pieChart').getContext('2d');
+        const pieChart = new Chart(ctx2, {
+            type: 'doughnut',
+            data: {
+                labels: ['bread', 'milk', 'cheese', 'chicken', 'meats', 'fruits', 'vegetables'],
+                datasets: [
+                    {
+                        data: [50, 60, 70, 40, 59, 20, 40],
+                    },
+                ],
+            },
+            options: {
+                plugins: {
+                    datalabels: {
+                        display: true,
+                        backgroundColor: '#ccc',
+                        borderRadius: 3,
+                        font: {
+                            color: 'red',
+                            weight: 'bold',
+                        },
+                    },
+                    doughnutlabel: {
+                        labels: [
+                            {
+                                text: '1000',
+                                font: {
+                                    size: 20,
+                                    weight: 'bold',
+                                },
+                            },
+                            {
+                                text: 'total',
+                            },
+                        ],
+                    },
+                },
+            },
+        });
+
+
 
     </script>
 </body>
