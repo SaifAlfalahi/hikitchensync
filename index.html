@@ -24,6 +24,7 @@
 
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+
 </head>
 
 <body>
@@ -58,7 +59,8 @@
 
                     <ul class="navbar-nav align-items-center mr-0">
                         <li class="nav-item">
-                            <a href="dashboard.html" class="nav-link" aria-label="Dashboard">Dashboard</a>
+                            <a class="nav-link" data-toggle="modal" data-target="#loginModal"
+                                aria-label="Login">Dashboard</a>
                         </li>
                         <li class="nav-item">
                             <a href="faqs.html" class="nav-link" aria-label="Faqs">FAQs</a>
@@ -71,7 +73,8 @@
 
                     <div class="d-block d-lg-none mobile-only-download text-white">
                         <p class="mb-1 text-center">Download KitchenSync App</p>
-                        <a href="https://github.com/zeck00/KitchenSync" target="_blank" class="btn main-btn btn-mobile" rel="noopener noreferrer" target="_blank">Click to
+                        <a href="https://github.com/zeck00/KitchenSync" target="_blank" class="btn main-btn btn-mobile"
+                            rel="noopener noreferrer" target="_blank">Click to
                             Download</a>
                     </div>
                 </div>
@@ -79,7 +82,37 @@
         </div>
 
     </header>
-
+    <div class="modal fade" id="loginModal" tabindex="100000" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="loginEmail">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your
+                                email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" class="form-control" id="loginPassword">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        <div class="alert alert-danger mt-3 d-none" role="alert" id="loginError">
+                            Invalid email or password.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main>
 
@@ -93,7 +126,7 @@
                         <h1 class="f-size-1 f-size-md-2 mb-0">
                             <strong>
                                 Master your
-                                <strong style="color: #1ca500;"> 
+                                <strong style="color: #1ca500;">
                                     Kitchen
                                 </strong>
                                 <br>
@@ -109,7 +142,8 @@
                         </span>
                         <br>
 
-                        <a href="https://github.com/zeck00/KitchenSync" target="_blank" class="btn main-btn mb-3" target="_self">Download
+                        <a href="https://github.com/zeck00/KitchenSync" target="_blank" class="btn main-btn mb-3"
+                            target="_self">Download
                             KitchenSync App</a>
                     </div>
                     <div class="spcial card-with-icon__media col-12 col-lg-6 col-md-12 text-center  order-1">
@@ -236,7 +270,8 @@
 
                                                 </picture>
 
-                                                <a href="https://github.com/zeck00/KitchenSync" target="_blank" class="btn main-btn d-inline-flex d-md-none btn-icon">
+                                                <a href="https://github.com/zeck00/KitchenSync" target="_blank"
+                                                    class="btn main-btn d-inline-flex d-md-none btn-icon">
                                                     Get Started</a>
                                             </div>
                                         </div>
@@ -273,7 +308,8 @@
 
                                                 </picture>
 
-                                                <a href="https://github.com/zeck00/KitchenSync" target="_blank" class="btn main-btn d-inline-flex d-md-none btn-icon">
+                                                <a href="https://github.com/zeck00/KitchenSync" target="_blank"
+                                                    class="btn main-btn d-inline-flex d-md-none btn-icon">
                                                     Get Started</a>
                                             </div>
                                         </div>
@@ -303,7 +339,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card" style="border: none; box-shadow: none;">
-                            <div class="card-body" >
+                            <div class="card-body">
 
                                 <div class="hori-timeline">
                                     <ul class="list-inline events d-inline d-lg-flex justify-content-center">
@@ -389,7 +425,8 @@
                             experience.
                         </p>
 
-                        <a href="https://github.com/zeck00/KitchenSync" target="_blank" class="btn main-btn display-6" target="_self">
+                        <a href="https://github.com/zeck00/KitchenSync" target="_blank" class="btn main-btn display-6"
+                            target="_self">
                             Download Now
                         </a>
                     </div>
@@ -418,7 +455,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-2">
-                    <a href="https://github.com/zeck00/KitchenSync" target="_blank" data-ctatype="other" aria-label="Home" data-event="ctaClick">
+                    <a href="https://github.com/zeck00/KitchenSync" target="_blank" data-ctatype="other"
+                        aria-label="Home" data-event="ctaClick">
                         <img src="assets/img/esaal-white.png" class="footer__logo" alt="">
                     </a>
                 </div>
@@ -474,7 +512,7 @@
                                             Terms & Conditions
                                         </a>
                                     </li>
-                                
+
                                 </ul>
                             </div>
 
@@ -507,7 +545,63 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@latest/dist/supabase.min.js"> </script>
+    <script src="supabaseClient.js"> </script>
 
+    <script>
+
+
+        const loginForm = document.getElementById('loginForm');
+        const loginEmail = document.getElementById('loginEmail');
+        const loginPassword = document.getElementById('loginPassword');
+        const loginError = document.getElementById('loginError');
+
+        loginForm.addEventListener('submit', async (event) => {
+            
+            event.preventDefault(); // Prevent default form submission
+            console.log("supabase initialized:", supabase);
+
+            const email = loginEmail.value;
+            const password = loginPassword.value;
+
+            // Call your function to check credentials against Supabase table
+            const isValidLogin = await checkCredentials(email, password);
+
+            if (isValidLogin) {
+                // Successful login, redirect to dashboard or handle login state
+                window.location.href = 'dashboard.html'; // Replace with your logic
+            } else {
+                // Invalid login, show error message
+                loginError.classList.remove('d-none'); // Make error message visible
+            }
+        });
+
+        async function checkCredentials(email, password) {
+            try {
+                const { data, error } = await supabase
+                    .from('users')
+                    .select('email', 'pass') // Select email and password (plain text - NOT RECOMMENDED)
+                    .eq('email', email) // Filter by email
+                    .single();
+
+                if (error) {
+                    throw error; // Re-throw error for handling
+                }
+
+                if (!data) {
+                    return false; // Email not found
+                }
+
+                // Compare plain text passwords (NOT RECOMMENDED)
+                return data.pass === password;
+            } catch (error) {
+                console.error('Error checking credentials:', error);
+                return false; // Handle errors gracefully
+            }
+        }
+
+
+    </script>
 </body>
 
 </html>

@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+ 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;900&display=swap"
         rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+    <link href="https://bootswatch.com/5/sketchy/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
             background-color: #edf5e8;
@@ -42,8 +42,9 @@
         }
 
         .btn-outline-success:hover {
-            background-color: #0D3334;
+            background-color: #00c28850;
             cursor: pointer;
+            color: black;
         }
 
         .btn-check:checked+.btn,
@@ -56,6 +57,7 @@
 
         .h1Logo {
             font-family: 'Brush Script MT', cursive;
+            font-size: 2.5vw;
         }
 
         .leftSide {
@@ -134,6 +136,7 @@
 
         .roundingCardEdges {
             border-radius: 20px;
+            border: 1px; 
         }
 
         .firstRow {
@@ -173,7 +176,7 @@
         }
 
         .rounded {
-            border-radius: 1000%;
+            border-radius: 100% !important;
             height: 14vh;
             width: 14vh;
             align-self: center;
@@ -209,6 +212,7 @@
             align-content: center;
             height: 100%;
             justify-content: center;
+            gap: 20px;
         }
 
         .percentage-increase {
@@ -238,7 +242,7 @@
 
         <div class="leftSide">
 
-            <h2 class="h1Logo">KitchenSync</h2>
+            <h1 class="h1Logo">KitchenSync</h1>
 
             <a style="height: 9vh;" href="index.html"> <img class="imgClass" src="assets/img/logo-colored.png"
                     alt="KitchenSync icon"></a>
@@ -273,9 +277,12 @@
                         Settings
                     </button>
 
-                    <button class="btn btn-outline-success">
-                        Help
-                    </button>
+                    <a href="faqs.html">
+                        <button class="btn btn-outline-success">
+                            Help
+                        </button>
+                    </a>
+
 
                 </div>
             </div>
@@ -283,8 +290,11 @@
 
         <div class="PageTop">
             <div class="Title">
-                Hello "User Name Here"
+                Hello Saif
                 <p style='font-size:1.4vw;'>Welcome to KitchenSync Smart Dashboard</p>
+            </div>
+            <div class="userEmail">
+                EmailHere
             </div>
             <div id="dateTime">
                 Date
@@ -386,7 +396,7 @@
                             <div class="card-body">
                                 <h2 style="border-bottom: rgba(0, 0, 0, 0.495) solid 0.5px; padding-bottom: 4px;">Latest
                                     food donation:</h2>
-                                <p style="font-size: 1vw;">
+                                <p style="font-size: 1.2vw;">
                                     <strong>Donation ID:</strong> #210229 <br>
                                     <strong>Bank name:</strong> UAE Food Bank <br>
                                     <strong>Branch:</strong> Muhaisnah 2 <br>
@@ -399,7 +409,7 @@
                             <div class="card-body">
                                 <h2 style="border-bottom: rgba(0, 0, 0, 0.495) solid 0.5px; padding-bottom: 4px;">
                                     Nearest expiring items:</h2>
-                                <p style="font-size: 1vw;">
+                                <p style="font-size: 1.2vw;">
                                     <strong>Item ID:</strong> #019912 <br>
                                     <strong>Item category:</strong> Meat <br>
                                     <strong>Item name:</strong> Ribeye Steak <br>
@@ -413,15 +423,15 @@
                                 <h2 style="border-bottom: rgba(0, 0, 0, 0.495) solid 0.5px; padding-bottom: 4px;">
                                     Recipe suggestion:
                                 </h2>
-                                
-                                <p style="font-size: 1vw;">
+
+                                <p style="font-size: 1.2vw;">
                                     <strong>Hearty Vegetable Stew</strong> <br>
                                     <strong>Uses: </strong>Carrots, Potatoes, Celery<br>
                                     <strong>Preparation Time: </strong>30 minutes<br>
                                     <strong>Cook Time: </strong>45 minutes<br>
                                     <strong>Difficulty: </strong>Easy
                                 </p>
-                               
+
                             </div>
                         </div>
                     </div>
@@ -430,118 +440,291 @@
                 <div class="tab-pane fade" id="v-pills-community" role="tabpanel"
                     aria-labelledby="v-pills-community-tab">
                     <!-- Community content -->
-
-
-
-                    <br><br>
-                    <div class="card shadow roundingCardEdges firstRow">
-                        <div class="card-body d-flex justify-content-between">
-                            <div class="squareTesting">
-
+                    <div class="d-flex gap-5  w-100 ">
+                        <div class="col-6">
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                Idea created Successfully
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
-                            <div class="squareTesting">
-
+                            <h4> Share yours ideas </h4>
+                            <div class="row">
+                                <div class="mb-3">
+                                    <textarea class="form-control" id="idea" rows="3"></textarea>
+                                </div>
+                                <div class="">
+                                    <button class="btn btn-dark"> Share </button>
+                                </div>
                             </div>
-                            <div class="squareTesting2">
-
+                            <hr>
+                            <div class="mt-3">
+                                <div class="card">
+                                    <div class="px-3 pt-4 pb-2">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center">
+                                                <img style="width:50px" class="me-2 avatar-sm rounded-circle"
+                                                    src="https://api.dicebear.com/6.x/fun-emoji/svg?seed=Mario" alt="Mario Avatar">
+                                                <div>
+                                                    <h5 class="card-title mb-0"><a href="#"> Mario
+                                                        </a></h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="fs-6 fw-light text-muted">
+                                            comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
+                                            of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of
+                                            ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum
+                                            dolor sit amet..", comes from a line in section 1.10.32.
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <a href="#" class="fw-light nav-link fs-6"> <span class="fas fa-heart me-1">
+                                                    </span> 100 </a>
+                                            </div>
+                                            <div>
+                                                <span class="fs-6 fw-light text-muted"> <span class="fas fa-clock"> </span>
+                                                    3-5-2023 </span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="mb-3">
+                                                <textarea class="fs-6 form-control" rows="1"></textarea>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-primary btn-sm"> Post Comment </button>
+                                            </div>
+            
+                                            <hr>
+                                            <div class="d-flex align-items-start">
+                                                <img style="width:35px" class="me-2 avatar-sm rounded-circle"
+                                                    src="https://api.dicebear.com/6.x/fun-emoji/svg?seed=Luigi"
+                                                    alt="Luigi Avatar">
+                                                <div class="w-100">
+                                                    <div class="d-flex justify-content-between">
+                                                        <h6 class="">Luigi
+                                                        </h6>
+                                                        <small class="fs-6 fw-light text-muted"> 3 hour
+                                                            ago</small>
+                                                    </div>
+                                                    <p class="fs-6 mt-3 fw-light">
+                                                        and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+                                                        Evil)
+                                                        by
+                                                        Cicero, written in 45 BC. This book is a treatise on the theory of ethics,
+                                                        very
+                                                        popular during the Renaissan
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card">
+                                <div class="card-header pb-0 border-0">
+                                    <h5 class="">Who to follow</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="hstack gap-2 mb-3">
+                                        <div class="avatar">
+                                            <a href="#!"><img class="avatar-img rounded-circle"
+                                                    src="https://api.dicebear.com/6.x/fun-emoji/svg?seed=Mario"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="overflow-hidden">
+                                            <a class="h6 mb-0" href="#!">Mario Brother</a>
+                                            <p class="mb-0 small text-truncate">@Mario</p>
+                                        </div>
+                                        <a class="btn btn-primary-soft rounded-circle icon-md ms-auto" href="#"><i
+                                                class="fa-solid fa-plus"> </i></a>
+                                    </div>
+                                    <div class="hstack gap-2 mb-3">
+                                        <div class="avatar">
+                                            <a href="#!"><img class="avatar-img rounded-circle"
+                                                    src="https://api.dicebear.com/6.x/fun-emoji/svg?seed=Mario"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="overflow-hidden">
+                                            <a class="h6 mb-0" href="#!">Mario Brother</a>
+                                            <p class="mb-0 small text-truncate">@Mario</p>
+                                        </div>
+                                        <a class="btn btn-primary-soft rounded-circle icon-md ms-auto" href="#"><i
+                                                class="fa-solid fa-plus"> </i></a>
+                                    </div>
+                                    <div class="d-grid mt-3">
+                                        <a class="btn btn-sm btn-primary-soft" href="#!">Show More</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-
-                    <br><br>
-                    <div class="firstRow d-flex justify-content-between  ">
-                        <div class="card shadow roundingCardEdges thirdRow">
-                            <div class="card-body">
-
-                            </div>
-                        </div>
-                        <div class="card shadow roundingCardEdges thirdRow2">
-                            <div class="card-body">
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <br><br>
-                    <div class="firstRow d-flex justify-content-between  ">
-                        <div class="card shadow roundingCardEdges secondRow">
-                            <div class="card-body">
-
-                            </div>
-                        </div>
-                        <div class="card shadow roundingCardEdges secondRow">
-                            <div class="card-body">
-
-                            </div>
-                        </div>
-                        <div class="card shadow roundingCardEdges secondRow">
-                            <div class="card-body">
-
-                            </div>
-                        </div>
-
-
-
-                    </div>
-
                 </div>
 
                 <div class="tab-pane fade" id="v-pills-info" role="tabpanel" aria-labelledby="v-pills-info-tab">
                     <!-- Account information content -->
 
-
-
-                    <br><br>
-                    <div class="card shadow roundingCardEdges firstRow">
-                        <div class="card-body d-flex justify-content-between">
-                            <div class="squareTesting">
-
+                    <div class="d-flex gap-5  w-100 ">
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="px-3 pt-4 pb-2">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="d-flex align-items-center">
+                                            <img style="width:50px" class="me-3 avatar-sm rounded-circle"
+                                                src="https://api.dicebear.com/6.x/fun-emoji/svg?seed=ssss"
+                                                alt="Mario Avatar">
+                                            <div>
+                                                <h3 class="card-title mb-0"><a href="#"> Katie Johanson
+                                                    </a></h3>
+                                                <span class="fs-6 text-muted">@Katie_cooks</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="px-2 mt-4">
+                                        <h5 class="fs-5"> About : </h5>
+                                        <p class="fs-6 fw-light">
+                                            This book is a treatise on the theory of ethics, very popular during the
+                                            Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
+                                            comes
+                                            from a line in section 1.10.32.
+                                        </p>
+                                        <div class="d-flex justify-content-start">
+                                            <a href="#" class="fw-light nav-link fs-6 me-3"> <span
+                                                    class="fas fa-user me-1">
+                                                </span> 120 Followers </a>
+                                            <a href="#" class="fw-light nav-link fs-6 me-3"> <span
+                                                    class="fas fa-brain me-1">
+                                                </span> 2 </a>
+                                            <a href="#" class="fw-light nav-link fs-6"> <span
+                                                    class="fas fa-comment me-1">
+                                                </span> 2 </a>
+                                        </div>
+                                        <div class="mt-3">
+                                            <button class="btn btn-primary btn-sm"> Follow </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="squareTesting">
+                            <hr>
+                            <div class="mt-3">
+                                <div class="card">
+                                    <div class="px-3 pt-4 pb-2">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="d-flex align-items-center">
+                                                <img style="width:50px" class="me-2 avatar-sm rounded-circle"
+                                                    src="https://api.dicebear.com/6.x/fun-emoji/svg?seed=Mario"
+                                                    alt="Mario Avatar">
+                                                <div>
+                                                    <h5 class="card-title mb-0"><a href="#"> Mario
+                                                        </a></h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="fs-6 fw-light text-muted">
+                                            comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"
+                                            (The
+                                            Extremes
+                                            of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on
+                                            the
+                                            theory of
+                                            ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
+                                            "Lorem ipsum
+                                            dolor sit amet..", comes from a line in section 1.10.32.
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <a href="#" class="fw-light nav-link fs-6"> <span
+                                                        class="fas fa-heart me-1">
+                                                    </span> 100 </a>
+                                            </div>
+                                            <div>
+                                                <span class="fs-6 fw-light text-muted"> <span class="fas fa-clock">
+                                                    </span>
+                                                    3-5-2023 </span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="mb-3">
+                                                <textarea class="fs-6 form-control" rows="1"></textarea>
+                                            </div>
+                                            <div>
+                                                <button class="btn btn-primary btn-sm"> Post Comment </button>
+                                            </div>
 
+                                            <hr>
+                                            <div class="d-flex align-items-start">
+                                                <img style="width:35px" class="me-2 avatar-sm rounded-circle"
+                                                    src="https://api.dicebear.com/6.x/fun-emoji/svg?seed=Luigi"
+                                                    alt="Luigi Avatar">
+                                                <div class="w-100">
+                                                    <div class="d-flex justify-content-between">
+                                                        <h6 class="">Luigi
+                                                        </h6>
+                                                        <small class="fs-6 fw-light text-muted"> 3 hour
+                                                            ago</small>
+                                                    </div>
+                                                    <p class="fs-6 mt-3 fw-light">
+                                                        and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of
+                                                        Good
+                                                        and
+                                                        Evil)
+                                                        by
+                                                        Cicero, written in 45 BC. This book is a treatise on the theory
+                                                        of
+                                                        ethics,
+                                                        very
+                                                        popular during the Renaissan
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="squareTesting2">
-
+                        </div>
+                        <div class="col-3">
+                            <div class="card">
+                                <div class="card-header pb-0 border-0">
+                                    <h5 class="">Who to follow</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="hstack gap-2 mb-3">
+                                        <div class="avatar">
+                                            <a href="#!"><img class="avatar-img rounded-circle"
+                                                    src="https://api.dicebear.com/6.x/fun-emoji/svg?seed=Mario"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="overflow-hidden">
+                                            <a class="h6 mb-0" href="#!">Mario Brother</a>
+                                            <p class="mb-0 small text-truncate">@Mario</p>
+                                        </div>
+                                        <a class="btn btn-primary-soft rounded-circle icon-md ms-auto" href="#"><i
+                                                class="fa-solid fa-plus"> </i></a>
+                                    </div>
+                                    <div class="hstack gap-2 mb-3">
+                                        <div class="avatar">
+                                            <a href="#!"><img class="avatar-img rounded-circle"
+                                                    src="https://api.dicebear.com/6.x/fun-emoji/svg?seed=Mario"
+                                                    alt=""></a>
+                                        </div>
+                                        <div class="overflow-hidden">
+                                            <a class="h6 mb-0" href="#!">Mario Brother</a>
+                                            <p class="mb-0 small text-truncate">@Mario</p>
+                                        </div>
+                                        <a class="btn btn-primary-soft rounded-circle icon-md ms-auto" href="#"><i
+                                                class="fa-solid fa-plus"> </i></a>
+                                    </div>
+                                    <div class="d-grid mt-3">
+                                        <a class="btn btn-sm btn-primary-soft" href="#!">Show More</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-
-                    <br><br>
-                    <div class="firstRow d-flex justify-content-between  ">
-                        <div class="card shadow roundingCardEdges thirdRow">
-                            <div class="card-body">
-
-                            </div>
-                        </div>
-                        <div class="card shadow roundingCardEdges thirdRow2">
-                            <div class="card-body">
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <br><br>
-                    <div class="firstRow d-flex justify-content-between ">
-                        <div class="card shadow roundingCardEdges secondRow">
-                            <div class="card-body">
-
-                            </div>
-                        </div>
-                        <div class="card shadow roundingCardEdges secondRow">
-                            <div class="card-body">
-
-                            </div>
-                        </div>
-                        <div class="card shadow roundingCardEdges secondRow">
-                            <div class="card-body">
-
-                            </div>
-                        </div>
-
 
 
 
@@ -552,8 +735,14 @@
             </div>
         </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+        </script>
     <script>
+
+
+
+
         document.addEventListener('DOMContentLoaded', function () {
             function updateDateTime() {
                 const dateTimeElement = document.getElementById('dateTime');
@@ -616,7 +805,7 @@
         const barChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr'],
+                labels: ['Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May'],
                 datasets: [{
                     label: 'Monthly Food waste %',
                     data: [12, 19, 3, 17, 6, 3, 7, 33, 15, 11, 6, 10],
