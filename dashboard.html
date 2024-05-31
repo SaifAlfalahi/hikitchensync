@@ -235,7 +235,12 @@
         .prof {
             width: 15vw;
         }
+
+        #location{
+            font-size: 1.2vw;
+        }
     </style>
+
 </head>
 
 <body>
@@ -297,7 +302,7 @@
                 Hello Saif
                 <p style='font-size:1.4vw;'>Welcome to KitchenSync Smart Dashboard</p>
             </div>
-
+            <div id="location"> </div>
             <div id="dateTime">
                 Date
             </div>
@@ -442,7 +447,7 @@
                 <div class="tab-pane fade" id="v-pills-community" role="tabpanel"
                     aria-labelledby="v-pills-community-tab">
                     <!-- Community content -->
-                    <div class="d-flex gap-5  w-100 ">
+                    <div class="d-flex justify-content-center w-100" style="margin-left: -3vw;">
                         <div class="col-7">
 
                             <h4> Share yours ideas </h4>
@@ -455,6 +460,8 @@
                                 </div>
                             </div>
                             <hr>
+
+                            <h4>Featured Posts</h4>
                             <div class="mt-3">
                                 <div class="card">
                                     <div class="px-3 pt-4 pb-2">
@@ -891,44 +898,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-3">
-                            <div class="card">
-                                <div class="card-header pb-0 border-0">
-                                    <h5 class=""></h5>
-                                </div>
-                                <div class="card-body">
-                                    <div class="hstack gap-2 mb-3">
-                                        <div class="avatar">
-                                            <a href="#!"><img class="avatar-img rounded-circle"
-                                                    src="https://api.dicebear.com/6.x/fun-emoji/svg?seed=Mario"
-                                                    alt=""></a>
-                                        </div>
-                                        <div class="overflow-hidden">
-                                            <a class="h6 mb-0" href="#!">Mario Brother</a>
-                                            <p class="mb-0 small text-truncate">@Mario</p>
-                                        </div>
-                                        <a class="btn btn-primary-soft rounded-circle icon-md ms-auto" href="#"><i
-                                                class="fa-solid fa-plus"> </i></a>
-                                    </div>
-                                    <div class="hstack gap-2 mb-3">
-                                        <div class="avatar">
-                                            <a href="#!"><img class="avatar-img rounded-circle"
-                                                    src="https://api.dicebear.com/6.x/fun-emoji/svg?seed=Mario"
-                                                    alt=""></a>
-                                        </div>
-                                        <div class="overflow-hidden">
-                                            <a class="h6 mb-0" href="#!">Mario Brother</a>
-                                            <p class="mb-0 small text-truncate">@Mario</p>
-                                        </div>
-                                        <a class="btn btn-primary-soft rounded-circle icon-md ms-auto" href="#"><i
-                                                class="fa-solid fa-plus"> </i></a>
-                                    </div>
-                                    <div class="d-grid mt-3">
-                                        <a class="btn btn-sm btn-primary-soft" href="#!">Show More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -995,11 +965,12 @@
                                     <div class="card-body">
                                         <p class="fs-5 fw-light text-muted">
                                             Hi everyone!
-                                            I've recently started using an app to track food expiration dates and it has
+                                            I've recently started using an KitchenSync app to track food expiration
+                                            dates and it has
                                             been a game-changer.
-                                            I label each item with a sticker showing its purchase date. This helps me
+                                            It helps me
                                             prioritize which foods to consume first and significantly reduces waste.
-                                            Does anyone else use tech to manage their kitchen inventory?
+
                                         </p>
                                         <div class="d-flex justify-content-between">
                                             <div>
@@ -1024,28 +995,13 @@
                                                         <small class="fs-6 fw-light text-muted"> 1 week ago</small>
                                                     </div>
                                                     <p class="fs-6 mt-3 fw-light">
-                                                        I love your approach, Janet! I use a similar app and it also
+                                                        I love KitchenSync, it
                                                         suggests recipes based on what I have. It's saved me so much
                                                         time and waste.
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div class="d-flex align-items-start">
-                                                <img style="width:35px" class="me-2 avatar-sm rounded-circle"
-                                                    src="https://api.dicebear.com/6.x/fun-emoji/svg?seed=NoraAvatar"
-                                                    alt="Nora Avatar">
-                                                <div class="w-100">
-                                                    <div class="d-flex justify-content-between">
-                                                        <h6 class="">Nora</h6>
-                                                        <small class="fs-6 fw-light text-muted"> 3 days ago</small>
-                                                    </div>
-                                                    <p class="fs-6 mt-3 fw-light">
-                                                        Janet, that's a brilliant idea! I've been thinking about ways to
-                                                        incorporate technology into my kitchen. Can you share the name
-                                                        of the app?
-                                                    </p>
-                                                </div>
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -1274,7 +1230,7 @@
                                         <a class="btn btn-primary-soft rounded-circle icon-md ms-auto" href="#"><i
                                                 class="fa-solid fa-plus"> </i></a>
                                     </div>
-                                   
+
                                 </div>
                             </div>
                             <br>
@@ -1321,7 +1277,7 @@
                                     </div>
                                 </div>
                                 <!-- Modals -->
-                             
+
 
                                 <!-- People You May Know Modal -->
                                 <div class="modal fade" id="peopleYouMayKnowModal" tabindex="-1"
@@ -1437,7 +1393,52 @@
     <script>
 
 
+        function getUserLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(success, error);
+            } else {
+                document.getElementById('location').innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
 
+        function success(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+
+            // Call the reverse geocoding API
+            reverseGeocode(latitude, longitude);
+        }
+
+        function error() {
+            document.getElementById('location').innerHTML = "Unable to retrieve your location.";
+        }
+
+        function reverseGeocode(latitude, longitude) {
+            var apiKey = '5d8ca4432ddf4fc0a9f63eb58a8caba0'; // Replace with your OpenCage API key
+            var apiUrl = `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${apiKey}`;
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.results && data.results.length > 0) {
+                        var location = data.results[0].components;
+                        var city = location.city || location.town || location.village;
+                        var country = location.country;
+                        document.getElementById('location').innerHTML = `${city}, ${country}`;
+                    } else {
+                        document.getElementById('location').innerHTML = "Unable to determine the location.";
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('location').innerHTML = "Error retrieving the location.";
+                });
+        }
+
+        // Trigger the geolocation on page load
+        document.addEventListener('DOMContentLoaded', (event) => {
+            getUserLocation();
+        });
 
         document.addEventListener('DOMContentLoaded', function () {
             function updateDateTime() {
