@@ -59,8 +59,7 @@
 
                     <ul class="navbar-nav align-items-center mr-0">
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="modal" data-target="#loginModal"
-                                aria-label="Login">Dashboard</a>
+                            <a href="dashboard.html" class="nav-link" aria-label="Dashboard">Dashboard</a>
                         </li>
                         <li class="nav-item">
                             <a href="faqs.html" class="nav-link" aria-label="Faqs">FAQs</a>
@@ -82,37 +81,7 @@
         </div>
 
     </header>
-    <div class="modal fade" id="loginModal" tabindex="100000" role="dialog" aria-labelledby="loginModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form id="loginForm">
-                        <div class="form-group">
-                            <label for="loginEmail">Email address</label>
-                            <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your
-                                email with anyone else.</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="loginPassword">Password</label>
-                            <input type="password" class="form-control" id="loginPassword">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Login</button>
-                        <div class="alert alert-danger mt-3 d-none" role="alert" id="loginError">
-                            Invalid email or password.
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <main>
 
@@ -545,63 +514,10 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@latest/dist/supabase.min.js"> </script>
-    <script src="supabaseClient.js"> </script>
 
-    <script>
+ 
 
 
-        const loginForm = document.getElementById('loginForm');
-        const loginEmail = document.getElementById('loginEmail');
-        const loginPassword = document.getElementById('loginPassword');
-        const loginError = document.getElementById('loginError');
-
-        loginForm.addEventListener('submit', async (event) => {
-            
-            event.preventDefault(); // Prevent default form submission
-            console.log("supabase initialized:", supabase);
-
-            const email = loginEmail.value;
-            const password = loginPassword.value;
-
-            // Call your function to check credentials against Supabase table
-            const isValidLogin = await checkCredentials(email, password);
-
-            if (isValidLogin) {
-                // Successful login, redirect to dashboard or handle login state
-                window.location.href = 'dashboard.html'; // Replace with your logic
-            } else {
-                // Invalid login, show error message
-                loginError.classList.remove('d-none'); // Make error message visible
-            }
-        });
-
-        async function checkCredentials(email, password) {
-            try {
-                const { data, error } = await supabase
-                    .from('users')
-                    .select('email', 'pass') // Select email and password (plain text - NOT RECOMMENDED)
-                    .eq('email', email) // Filter by email
-                    .single();
-
-                if (error) {
-                    throw error; // Re-throw error for handling
-                }
-
-                if (!data) {
-                    return false; // Email not found
-                }
-
-                // Compare plain text passwords (NOT RECOMMENDED)
-                return data.pass === password;
-            } catch (error) {
-                console.error('Error checking credentials:', error);
-                return false; // Handle errors gracefully
-            }
-        }
-
-
-    </script>
 </body>
 
 </html>
